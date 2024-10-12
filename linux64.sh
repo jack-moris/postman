@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo "start to do set" 1>&2
+
 set -o errexit
 set -o nounset
 PREFIX='/usr/local'
