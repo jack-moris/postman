@@ -1,12 +1,8 @@
 #!/bin/sh
-
 set -o errexit
 set -o nounset
-
 PREFIX='/usr/local'
-
 URL='https://dl-cli.pstmn.io/download/latest/linux64'
-
 # We should always make use a temporary directory
 # to not risk leaving a trail of files behind in the user's system
 TMP="$(mktemp -d)"
