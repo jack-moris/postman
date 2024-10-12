@@ -11,15 +11,18 @@ trap clean EXIT
 
 if command -v curl > /dev/null
 then
+  echo "will do curl" 1>&2
   curl --location --retry 10 --output "$TMP/postman-cli.tar.gz" "$URL"
 elif command -v wget > /dev/null
 then
+  echo "will do wget" 1>&2
   wget --output-document "$TMP/postman-cli.tar.gz" "$URL"
 else
   echo "You need either cURL or wget installed on your system" 1>&2
   exit 1
 fi
 
+echo "will do tar" 1>&2
 tar --directory "$TMP" --extract --file "$TMP/postman-cli.tar.gz"
 
 # Don't use sudo(8) if we don't seem to need it
