@@ -5,12 +5,6 @@ set -o nounset
 
 PREFIX='/usr/local'
 
-#if [ "$(uname -m)" != "x86_64" ]
-#then
-#  echo "Only x64 is supported at this time" 1>&2
-#  exit 1
-#fi
-
 URL='https://dl-cli.pstmn.io/download/latest/linux64'
 
 # We should always make use a temporary directory
